@@ -1,0 +1,6 @@
+media/
+db.sqlite3
+lib/
+bin/
+include/
+pyvenv.cfg
