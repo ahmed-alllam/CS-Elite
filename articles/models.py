@@ -2,8 +2,6 @@ from django.db import models
 import datetime
 from django.db.models.deletion import CASCADE, SET_NULL
 
-from django.utils import text
-
 class User(models.Model):
     user = models.ForeignKey(to='auth.User', on_delete=models.cascade)
     profile_photo = models.ImageField()
