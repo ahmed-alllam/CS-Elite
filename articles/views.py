@@ -1,6 +1,7 @@
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView
 from articles.forms import AddCommentForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 class DetailedArticleView(TemplateView):
     template_name = 'article.html'
@@ -17,7 +18,7 @@ class ArticlesByTagView(TemplateView):
         return context
 
 
-class CommentCreateView(CreateView):
+class CommentCreateView(LoginRequiredMixin, CreateView):
     http_method_names = ['post']
     form_name = AddCommentForm
 
