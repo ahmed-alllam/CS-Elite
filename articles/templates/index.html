@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" data-rh="true"/>
+        <meta data-rh="true" name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1"/>
+        <meta name="description" content="">
+        <title data-rh="true">CS Elite</title>
+    </head>
+
+    <body>
+        
+        <header>
+            <div id="title-header">
+                <h1 id="title">CS Elite</label>
+            </div>
+
+            <div id="nav-header">
+
+                <nav>
+                    <ul>
+                        {% for category in categories %}
+                            <li><a href="/categories/{{ category.slug }}"> {{ category.title }} </a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+
+        <div id="latest-article">
+
+            {% for article in articles %}
+                <article>
+                    <header>
+                        <h2>
+                            <a href="/articles/{{ article.slug }}"> 
+                                {{ article.title }} 
+                            </a>
+                        </h2>
+                    </header>
+
+                    <p>
+                        {{ article.description }}
+                    </p>
+
+                    <div>
+                        <span>{{ article.time_to_read  }} min. read </span>
+
+                        <time datetime="{{ article.updated_at }}">
+                        </time>
+
+                        <span>
+                            {{ article.category.title }}
+                        </span>
+                    </div>
+
+                <a href="/articles/{{ article.slug }}">
+                    <img src="{{ article.thumbnail }}" alt="{{ article.title }}" width="200" height="200"/>
+                </a>
+
+                </article>
+            {% endfor %}
+        </div>
+
+
+        <div id="top-articles">
+            <h2>
+                Top Articles
+            </h2>
+            
+            {% for article in top_articles %}
+                <article>
+                    <header>
+                        <h3>
+                            <a href="/articles/{{ article.slug }}"> 
+                                {{ article.title }} 
+                            </a>
+                        </h3>
+                    </header>
+
+                    <p>
+                        {{ article.description }}
+                    </p>
+
+                    <div>
+                        <span>{{ article.time_to_read  }} min. read </span>
+
+                        <time datetime="{{ article.updated_at }}">
+                        </time>
+
+                        <span>
+                            {{ article.category.title }}
+                        </span>
+                    </div>
+
+                <a href="/articles/{{ article.slug }}">
+                    <img src="{{ article.thumbnail }}" alt="{{ article.title }}" width="100" height="100"/>
+                </a>
+
+                </article>
+            {% endfor %}
+            
+        </div>
+
+
+        <div id="latest-videos">
+            <h2>
+                Latest Videos
+            </h2>
+
+            {% for video in videos %}
+                <article>
+                    <header>
+                        <h3>
+                            <a href="{{ video.link }}"> 
+                                {{ video.title }} 
+                            </a>
+                        </h3>
+                    </header>
+
+                    <p>
+                        {{ video.description }}
+                    </p>
+
+                    <div>
+                        <time datetime="{{ video.date }}">
+                        </time>
+                    </div>
+
+                <a href="{{ video.link }}">
+                    <img src="{{ video.thumbnail }}" alt="{{ video.title }}" width="100" height="100"/>
+                </a>
+
+                </article>
+            {% endfor %}
+        </div>
+
+
+        <footer>
+            <div>
+              <div">
+                <div>
+                  <h6>About</h6>
+                  <p class="text-justify">cselite.dev  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eveniet nam natus recusandae aliquam quaerat enim corrupti officiis exercitationem, commodi harum temporibus nobis quis facere ex nulla illo libero sunt.</p>
+                </div>
+      
+                <div>
+                  <h6>Categories</h6>
+                  <ul>
+                        {% for category in categories %}
+                            <li><a href="/categories/{{ category.slug }}"> {{ category.title }} </a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+              </div>
+              <hr>
+            </div>
+            <div>
+              <div>
+                <div>
+                  <p>Copyright &copy; 2022 All Rights Reserved by 
+               <a href="#">CS Elite</a>.
+                  </p>
+                </div>
+      
+                <div>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>   
+                  </ul>
+                </div>
+              </div>
+            </div>
+      </footer>
+    </body>
+
+</html>

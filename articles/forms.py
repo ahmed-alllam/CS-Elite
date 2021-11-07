@@ -2,7 +2,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.forms import models as forms
 from articles.models import Article, User
-import models
+from . import models
 
 class AddCommentForm(forms.ModelForm):
     class Meta:

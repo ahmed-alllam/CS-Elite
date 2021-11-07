@@ -4,14 +4,14 @@ from articles.forms import AddCommentForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 class DetailedArticleView(TemplateView):
-    template_name = 'article.html'
+    template_name = 'article_detail.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
 
 class ArticlesByTagView(TemplateView):
-    template_name = 'articles.html'
+    template_name = 'articles_list.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
