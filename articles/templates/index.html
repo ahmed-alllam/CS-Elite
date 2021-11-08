@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -5,155 +7,144 @@
     <head>
         <meta charset="utf-8" data-rh="true"/>
         <meta data-rh="true" name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1"/>
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css'%}" media="screen" />
         <meta name="description" content="">
         <title data-rh="true">CS Elite</title>
     </head>
 
-    <body>
-        
-        <header>
-            <div id="title-header">
-                <h1 id="title">CS Elite</label>
-            </div>
+    <body data-media-url="{% get_media_prefix %}">
 
-            <div id="nav-header">
-
-                <nav>
-                    <ul>
-                        {% for category in categories %}
-                            <li><a href="/categories/{{ category.slug }}"> {{ category.title }} </a></li>
-                        {% endfor %}
-                    </ul>
-                </nav>
-
-            </div>
+        <header class="header" id="header">
+            <h1 class="title">CS Elite</label>
+            <nav class="navigation-bar">
+                <ul>
+                    {% for category in categories %}
+                        <li><a href="/categories/{{ category.slug }}"> {{ category.title }} </a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
         </header>
 
 
-        <div id="latest-article">
+        <main class="main">
+            <section class="latest-articles">
 
-            {% for article in articles %}
-                <article>
-                    <header>
-                        <h2>
-                            <a href="/articles/{{ article.slug }}"> 
-                                {{ article.title }} 
-                            </a>
-                        </h2>
-                    </header>
+                {% for article in articles %}
+                    <article>
+                        <header>
+                            <h2>
+                                <a href="/articles/{{ article.slug }}">
+                                    {{ article.title }}
+                                </a>
+                            </h2>
+                        </header>
 
-                    <p>
-                        {{ article.description }}
-                    </p>
+                        <p>
+                            {{ article.description }}
+                        </p>
 
-                    <div>
-                        <span>{{ article.time_to_read  }} min. read </span>
+                        <div>
+                            <span>{{ article.time_to_read  }} min. read </span>
 
-                        <time datetime="{{ article.updated_at }}">
-                        </time>
+                            <time datetime="{{ article.updated_at }}">
+                            </time>
 
-                        <span>
-                            {{ article.category.title }}
-                        </span>
-                    </div>
+                            <span>
+                                {{ article.category.title }}
+                            </span>
+                        </div>
 
-                <a href="/articles/{{ article.slug }}">
-                    <img src="{{ article.thumbnail }}" alt="{{ article.title }}" width="200" height="200"/>
-                </a>
+                    <a href="/articles/{{ article.slug }}">
+                        <img src="{% get_media_prefix %}{{ article.thumbnail }}" alt="{{ article.title }}" width="200" height="200"/>
+                    </a>
 
-                </article>
-            {% endfor %}
-        </div>
+                    </article>
+                {% endfor %}
+            </section>
 
+            <aside>
+                <section class="top-articles">
+                    <h2>
+                        Top Articles
+                    </h2>
 
-        <div id="top-articles">
-            <h2>
-                Top Articles
-            </h2>
-            
-            {% for article in top_articles %}
-                <article>
-                    <header>
-                        <h3>
-                            <a href="/articles/{{ article.slug }}"> 
-                                {{ article.title }} 
-                            </a>
-                        </h3>
-                    </header>
+                    {% for article in top_articles %}
+                        <article>
+                            <header>
+                                <h3>
+                                    <a href="/articles/{{ article.slug }}">
+                                        {{ article.title }}
+                                    </a>
+                                </h3>
+                            </header>
 
-                    <p>
-                        {{ article.description }}
-                    </p>
+                            <p>
+                                {{ article.description }}
+                            </p>
 
-                    <div>
-                        <span>{{ article.time_to_read  }} min. read </span>
+                            <div>
+                                <span>{{ article.time_to_read  }} min. read </span>
 
-                        <time datetime="{{ article.updated_at }}">
-                        </time>
+                                <time datetime="{{ article.updated_at }}">
+                                </time>
 
-                        <span>
-                            {{ article.category.title }}
-                        </span>
-                    </div>
+                                <span>
+                                    {{ article.category.title }}
+                                </span>
+                            </div>
 
-                <a href="/articles/{{ article.slug }}">
-                    <img src="{{ article.thumbnail }}" alt="{{ article.title }}" width="100" height="100"/>
-                </a>
+                        <a href="/articles/{{ article.slug }}">
+                            <img src="{% get_media_prefix %}{{ article.thumbnail }}" alt="{{ article.title }}" width="100" height="100"/>
+                        </a>
 
-                </article>
-            {% endfor %}
-            
-        </div>
+                        </article>
+                    {% endfor %}
 
-
-        <div id="latest-videos">
-            <h2>
-                Latest Videos
-            </h2>
-
-            {% for video in videos %}
-                <article>
-                    <header>
-                        <h3>
-                            <a href="{{ video.link }}"> 
-                                {{ video.title }} 
-                            </a>
-                        </h3>
-                    </header>
-
-                    <p>
-                        {{ video.description }}
-                    </p>
-
-                    <div>
-                        <time datetime="{{ video.date }}">
-                        </time>
-                    </div>
-
-                <a href="{{ video.link }}">
-                    <img src="{{ video.thumbnail }}" alt="{{ video.title }}" width="100" height="100"/>
-                </a>
-
-                </article>
-            {% endfor %}
-        </div>
+                </section>
 
 
-        <footer>
+                <section class="latest-videos">
+                    <h2>
+                        Latest Videos
+                    </h2>
+
+                    {% for video in videos %}
+                        <article>
+                            <header>
+                                <h3>
+                                    <a href="{{ video.link }}">
+                                        {{ video.title }}
+                                    </a>
+                                </h3>
+                            </header>
+
+                            <p>
+                                {{ video.description }}
+                            </p>
+
+                            <div>
+                                <time datetime="{{ video.date }}">
+                                </time>
+                            </div>
+
+                        <a href="{{ video.link }}">
+                            <img src="{{ video.thumbnail }}" alt="{{ video.title }}" width="100" height="100"/>
+                        </a>
+
+                        </article>
+                    {% endfor %}
+                </section>
+
+            </aside>
+        </main>
+
+        <footer class="footer">
             <div>
-              <div">
+              <div>
                 <div>
                   <h6>About</h6>
                   <p class="text-justify">cselite.dev  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eveniet nam natus recusandae aliquam quaerat enim corrupti officiis exercitationem, commodi harum temporibus nobis quis facere ex nulla illo libero sunt.</p>
-                </div>
-      
-                <div>
-                  <h6>Categories</h6>
-                  <ul>
-                        {% for category in categories %}
-                            <li><a href="/categories/{{ category.slug }}"> {{ category.title }} </a></li>
-                        {% endfor %}
-                    </ul>
                 </div>
               </div>
               <hr>
@@ -161,20 +152,34 @@
             <div>
               <div>
                 <div>
-                  <p>Copyright &copy; 2022 All Rights Reserved by 
+                  <p>Copyright &copy; 2022 All Rights Reserved by
                <a href="#">CS Elite</a>.
                   </p>
                 </div>
-      
+
                 <div>
                   <ul>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>   
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                   </ul>
                 </div>
               </div>
             </div>
-      </footer>
+
+        </footer>
     </body>
 
+    <script>
+        window.onscroll = () => {
+            var header = document.getElementById("header");
+
+            var sticky = header.offsetTop;
+
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        };
+    </script>
 </html>

@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "DIN Condensed";
+  src: url("static/fonts/DIN-Bold.ttf");
+}
+
+@font-face {
+  font-family: "DIN Alternate";
+  src: url("static/fonts/DINAlternate-Bold.ttf");
+}
+
+* {
+  padding : 0;
+  margin : 0;
+}
+
+body{
+  background-color: white;
+}
+
+.header {
+  text-align: center;
+  background: #c9e3fc;
+  color: #697784;
+  font-family: "DIN Alternate";
+  font-size: 30px;
+  box-shadow: 5px 5px 10px #00000010;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.navigation-bar {
+  font-family: "DIN Alternate";
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid;
+  border-color: #00000027;
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+  overflow-x:scroll;
+  display: flex;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  opacity: 47%;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  width: max-content;
+}
+
+li a:hover {
+  background-color: rgb(224, 224, 224);
+}
