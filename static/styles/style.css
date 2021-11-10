@@ -1,12 +1,16 @@
 @font-face {
   font-family: "DIN Condensed";
-  src: url("static/fonts/DIN-Bold.ttf");
+  src: url("/static/fonts/DIN-Bold.ttf");
 }
 
 @font-face {
   font-family: "DIN Alternate";
-  src: url("static/fonts/DINAlternate-Bold.ttf");
+  src: url("/static/fonts/DINAlternate-Bold.ttf");
 }
+
+
+
+
 
 * {
   padding : 0;
@@ -14,15 +18,23 @@
 }
 
 body{
-  background-color: white;
+  background-color: #c9e3fc;
 }
+
+
+
+
+
+
+
+
 
 .header {
   text-align: center;
   background: #c9e3fc;
   color: #697784;
   font-family: "DIN Alternate";
-  font-size: 30px;
+  font-size: 26px;
   box-shadow: 5px 5px 10px #00000010;
   width: 100%;
   position: sticky;
@@ -31,15 +43,13 @@ body{
 
 .navigation-bar {
   font-family: "DIN Alternate";
-  font-size: 15px;
-  margin: 0;
-  padding: 0;
+  font-size: 16px;
   border-top: 2px solid;
   border-color: #00000027;
   background-color: white;
 }
 
-ul {
+nav ul {
   list-style-type: none;
   overflow-x:scroll;
   display: flex;
@@ -52,11 +62,11 @@ ul::-webkit-scrollbar {
   display: none;
 }
 
-li {
+nav li {
   float: left;
 }
 
-li a {
+nav a {
   display: block;
   color: black;
   opacity: 47%;
@@ -66,6 +76,200 @@ li a {
   width: max-content;
 }
 
-li a:hover {
+nav a:hover {
   background-color: rgb(224, 224, 224);
+}
+
+
+
+
+
+
+
+
+
+.main {
+  background-color:white;
+}
+
+
+
+
+
+
+
+.footer {
+  font-family: "DIN Alternate";
+  background-color:#c9e3fc;
+  font-size:15px;
+  line-height:24px;
+  padding-top: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  color:#697784;
+}
+
+.footer hr
+{
+  border-top: 1px solid #697784;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footer h3
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  margin-bottom: 20px;
+  letter-spacing:2px
+}
+
+.footer a
+{
+  color:#737373;
+  text-decoration: none;
+}
+
+.footer a:hover
+{
+  color:white;
+  text-decoration:none;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+
+
+
+.social-links a.twitter:hover {
+  background-color: #3cf;
+}
+.social-links a.twitter {
+  color: #3cf;
+}
+
+.social-links a.youtube:hover {
+  background-color: #FF0000;
+}
+.social-links a.youtube {
+  color: #FF0000;
+}
+
+.social-links a.linkedin:hover {
+  background-color: #0e76a8 ;
+}
+.social-links a.linkedin {
+  color: #0e76a8 ;
+}
+
+.social-links a.github:hover {
+  background-color: #666666 ;
+}
+.social-links a.github {
+  color: #666666 ;
+}
+
+
+
+
+
+
+
+
+.footer .social-links
+{
+  text-align:right;
+  margin-bottom: 10px;
+}
+.footer .social-links a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:white;
+}
+.copyright
+{
+  margin:0;
+  margin-bottom: 10px;
+}
+@media (max-width:991px)
+{
+  .footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .footer
+  {
+    padding-bottom:0
+  }
+  .footer .copyright,.footer .social-links
+  {
+    text-align:center
+  }
+}
+.social-links
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-links li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-links li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-links a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:23px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-links a:active,.social-links a:focus,.social-links a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-links.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+@media (max-width:767px)
+{
+  .social-links li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
 }

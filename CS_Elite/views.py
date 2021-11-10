@@ -7,6 +7,7 @@ class HomeView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['articles'] = models.Article.objects.filter()
         context['categories'] = models.Category.objects.filter()
+        context['top_categories'] = models.Category.objects.filter()[0:5]
         return context
 
 class ArticlesByCategory(TemplateView):
