@@ -1,6 +1,6 @@
 @font-face {
   font-family: "DIN Condensed";
-  src: url("/static/fonts/DIN-Bold.ttf");
+  src: url("/static/fonts/DINCondensed-Light.ttf");
 }
 
 @font-face {
@@ -34,7 +34,7 @@ body{
   background: #c9e3fc;
   color: #697784;
   font-family: "DIN Alternate";
-  font-size: 26px;
+  font-size: 23px;
   box-shadow: 5px 5px 10px #00000010;
   width: 100%;
   position: sticky;
@@ -88,8 +88,77 @@ nav a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
 .main {
   background-color:white;
+  border-top: 40px solid white;
+  border-bottom: 20px solid white;
+
+  padding-left: 5%;
+  width: inherit;
+}
+
+[class*="col-"] {
+  position: inherit;
+}
+
+.main h2 {
+  font-family: "DIN Alternate";
+  font-size: 25px;
+  color: #004488;
+}
+
+
+article {
+  display:flex;
+  margin-bottom: 20px;
+}
+
+article .article-info {
+  margin-right: 5%;
+}
+
+article a {
+  text-decoration: none;
+  color: #004488;
+  font-family: "DIN Alternate";
+  font-size: 30px;
+}
+
+article p {
+  font-family: "DIN Condensed";
+  font-size: 18px;
+  color: #00448857;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+article span,time {
+  font-family: "DIN Condensed";
+  font-size: 15px;
+  color: #00448857;
+  margin-right: 5px;
+}
+
+article .thumbnail {
+  margin-left: auto;
+  margin-right: 5%;
+}
+
+article .thumbnail img {
+  height: 8vw;
+  width: 12vw;
+  min-height: 80px;
+  min-width: 120px;
 }
 
 
