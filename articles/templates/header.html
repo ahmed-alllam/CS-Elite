@@ -1,0 +1,10 @@
+<header class="header" id="header">
+    <h1 class="title">CS Elite</h1>
+    <nav class="navigation-bar">
+        <ul>
+            {% for category in categories %}
+            <li><a href="/categories/{{ category.slug }}"> {{ category.title }} </a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,60 @@
+<footer class="footer">
+
+    <div class="row">
+        <div class="about col-sm-12 col-md-6">
+            <h3>About</h3>
+            <p class="text-justify">cselite.dev Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                eveniet nam natus recusandae aliquam quaerat enim corrupti officiis exercitationem, commodi harum
+                temporibus nobis quis facere ex nulla illo libero sunt.</p>
+        </div>
+
+        <div class="categories col-xs-6 col-md-3">
+            <h3>Categories</h3>
+
+            <ul>
+                {% for category in top_categories %}
+                <li><a href="/categories/{{ category.slug }}"> {{ category.title }} </a></li>
+                {% endfor %}
+            </ul>
+
+
+        </div>
+
+        <div class="quick-links col-xs-6 col-md-3">
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact-us">Contact Us</a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/sitemap">Sitemap</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="social">
+        <div class="copyright col-md-8 col-sm-6 col-xs-12">
+            <p>Copyright &copy; 2022 All Rights Reserved by
+                <a href="#">CS Elite</a>.
+            </p>
+        </div>
+
+        <div class="social-links col-md-4 col-sm-6 col-xs-12">
+            <ul>
+                <li><a href="https://www.youtube.com/channel/UCacWdwLTRw1AMaH8ALs_irA" class="btn youtube"
+                        target="_blank"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://twitter.com/cselitedev" class="btn twitter" target="_blank"><i
+                            class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/ahmed-emad-allam/" class="btn linkedin" target="_blank"><i
+                            class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/ahmedemad3965" class="btn github" target="_blank"><i
+                            class="fa fa-github"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+</footer>

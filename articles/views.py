@@ -11,7 +11,7 @@ class DetailedArticleView(TemplateView):
         return context
 
 class ArticlesByTagView(TemplateView):
-    template_name = 'articles_list.html'
+    template_name = 'articles.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

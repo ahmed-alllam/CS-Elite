@@ -1,0 +1,40 @@
+{% load static %}
+
+<div class="articles">
+    {% for article in articles %}
+    <article>
+        <div class="article-info">
+            <header>
+                <h2>
+                    <a href="/articles/{{ article.slug }}">
+                        {{ article.title }}
+                    </a>
+                </h2>
+            </header>
+
+            <p>
+                {{ article.description }}
+            </p>
+
+            <div class="article-extras">
+                <span>{{ article.time_to_read }} min. read </span>
+
+                <time datetime="{{ article.updated_at }}"> 
+                    <!--{{ article.updated_at }} --> <!-- TODO-->
+                    one day ago
+                </time>
+
+                <span>
+                    {{ article.category.title }}
+                </span>
+            </div>
+        </div>
+
+        <a href="/articles/{{ article.slug }}" class="thumbnail">
+            <img src="{% get_media_prefix %}{{ article.thumbnail }}" alt="{{ article.title }}" />
+        </a>
+
+    </article>
+    {% endfor %}
+
+</div>
