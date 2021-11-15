@@ -118,6 +118,31 @@ nav a:hover {
 }
 
 
+.main .pages {
+  display: inline-block;
+}
+
+.main .pages a {
+  border-radius: 5px;
+  color: #697784;
+  font-family: "DIN Alternate";
+  float: left;
+  padding: 8px 16px;
+  margin-right: 2px;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.main .pages .current {  
+  background-color: #c9e3fc;
+  color: white;
+}
+
+.main .pages a:hover:not(.current) {
+  background-color: #ddd;
+}
+
+
 article {
   display:flex;
   margin-bottom: 20px;

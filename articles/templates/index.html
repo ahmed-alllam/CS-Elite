@@ -50,7 +50,7 @@
 
                         <div class="article-extras">
                             <span>{{ article.time_to_read }} min. read </span>
-                            
+
                             <time datetime="{{ article.updated_at }}">
                                 <!--{{ article.updated_at }} -->
                                 one day ago
@@ -70,6 +70,31 @@
                 {% endfor %}
 
             </div>
+
+            <footer class="pages">
+
+                {% if page_obj.has_previous %}
+                    {% for page in previous_pages_range %}
+                        <a href="?page={{page}}">{{page}}</a>
+                    {% endfor %}
+                {% endif %}
+
+
+                {% if page_obj.has_previous or page_obj.has_next %}
+
+                    <a href="#" class="current">
+                        {{ page_obj.number }}
+                    </a>
+                {% endif %}
+                
+
+                {% if page_obj.has_next %}
+                    {% for page in next_pages_range %}
+                        <a href="?page={{page}}">{{page}}</a>
+                    {% endfor %}
+                {% endif %}
+                </a>
+            </footer>
         </section>
 
         <aside class="col-6 col-md-5 col-sm-5">
