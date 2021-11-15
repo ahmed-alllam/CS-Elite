@@ -24,6 +24,7 @@ urlpatterns = [
     path('', views.HomeView.as_view()),
     path('categories/<slug:slug>', views.ArticlesByCategory.as_view()),
     path('admin/', admin.site.urls),
-    path('articles/', include('articles.url'))
+    path('articles/', include('articles.url')),
+    path("ckeditor/", include('ckeditor_uploader.urls')), # <-- here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
     + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

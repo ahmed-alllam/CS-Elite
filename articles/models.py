@@ -2,6 +2,7 @@ from django.db import models
 import datetime
 from django.db.models.deletion import CASCADE, SET_NULL
 from django.contrib.postgres.fields import ArrayField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 class User(models.Model):
     user = models.OneToOneField(to='auth.User', on_delete=CASCADE)
@@ -14,7 +15,7 @@ class Article(models.Model):
     thumbnail = models.ImageField()
     slug = models.SlugField()
     description = models.TextField()
-    text = models.TextField()
+    text = RichTextUploadingField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(to='articles.Category', related_name='articles', on_delete=SET_NULL, null=True)
