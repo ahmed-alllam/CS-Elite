@@ -30,7 +30,7 @@
 
 
     <main class="main row">
-        <section class="latest-articles col-12 col-sm-7 col-md-7">
+        <section class="latest-articles col-12 col-sm-8 col-md-8">
 
             <div class="articles">
                 {% for article in articles %}
@@ -74,30 +74,30 @@
             <footer class="pages">
 
                 {% if page_obj.has_previous %}
-                    {% for page in previous_pages_range %}
-                        <a href="?page={{page}}">{{page}}</a>
-                    {% endfor %}
+                {% for page in previous_pages_range %}
+                <a href="?page={{page}}">{{page}}</a>
+                {% endfor %}
                 {% endif %}
 
 
                 {% if page_obj.has_previous or page_obj.has_next %}
 
-                    <a href="#" class="current">
-                        {{ page_obj.number }}
-                    </a>
+                <a href="#" class="current">
+                    {{ page_obj.number }}
+                </a>
                 {% endif %}
-                
+
 
                 {% if page_obj.has_next %}
-                    {% for page in next_pages_range %}
-                        <a href="?page={{page}}">{{page}}</a>
-                    {% endfor %}
+                {% for page in next_pages_range %}
+                <a href="?page={{page}}">{{page}}</a>
+                {% endfor %}
                 {% endif %}
                 </a>
             </footer>
         </section>
 
-        <aside class="col-6 col-md-5 col-sm-5">
+        <aside class="col-4 col-md-4 col-sm-4 hidden-xs">
             <div class="aside-sections">
 
                 <section class="top-articles">
@@ -174,6 +174,7 @@
 
             </div>
         </aside>
+
     </main>
 
     <footer class="footer">
