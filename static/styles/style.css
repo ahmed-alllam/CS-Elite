@@ -112,6 +112,17 @@ nav a:hover {
   position: inherit;
 }
 
+.main h1 {
+  font-family: "DIN Alternate";
+  font-size: 35px;
+  color: #004488;
+}
+
+.cateogry-header hr {
+  border-top: 1px solid #c9e3fc;
+  margin: 5px 5% 38px auto;
+}
+
 .main h2 {
   font-family: "DIN Alternate";
   font-size: 25px;
@@ -170,10 +181,6 @@ article .thumbnail img {
 aside hr {
   border-top: 1px solid #c9e3fc;
   margin: 10px 5% 20px auto;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: 5%;
 }
 
 

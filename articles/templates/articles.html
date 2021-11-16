@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
-    <head>
+{% include "sections/head.html" %}
 
-    </head>
+<body>
+    {% include "sections/header.html" %}
 
-    <body>
+    <main class="main row">
         
-    </body>
+        <section class="latest-articles col-12 col-sm-8 col-md-8">
+
+            <header class="cateogry-header">
+                <h1>
+                    {{ category.title }}
+                </h1>
+        
+                <hr>
+            </header>
+        
+
+            {% include "sections/articles_list.html" %}
+
+            {% include "sections/paging_footer.html" %}
+        </section>
+    </main>
+
+    {% include "sections/footer.html" %}
+
+</body>
 
 </html>
