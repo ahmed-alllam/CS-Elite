@@ -1,0 +1,265 @@
+.header {
+  text-align: center;
+  background: #c9e3fc;
+  color: #697784;
+  font-family: "DIN Alternate";
+  font-size: 23px;
+  box-shadow: 5px 5px 10px #00000010;
+  width: 100%;
+  position: sticky;
+  top: 0; }
+  .header .title {
+    text-decoration: none;
+    color: inherit; }
+
+.navigation-bar {
+  font-family: "DIN Alternate";
+  font-size: 16px;
+  border-top: 2px solid;
+  border-color: #00000027;
+  background-color: white; }
+
+nav ul {
+  list-style-type: none;
+  overflow-x: scroll;
+  display: flex;
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
+
+nav li {
+  float: left; }
+
+nav a {
+  display: block;
+  color: black;
+  opacity: 47%;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  width: max-content; }
+  nav a:hover {
+    background-color: #e0e0e0; }
+
+ul::-webkit-scrollbar {
+  display: none; }
+
+@font-face {
+  font-family: "DIN Condensed";
+  src: url("/static/fonts/DINCondensed-Light.ttf?0b5c0e7f552c"); }
+
+@font-face {
+  font-family: "DIN Alternate";
+  src: url("/static/fonts/DINAlternate-Bold.ttf?955ab2417692"); }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #c9e3fc; }
+
+.main {
+  background-color: white;
+  border-top: 40px solid white;
+  border-bottom: 20px solid white;
+  padding-left: 5%;
+  width: inherit;
+  min-height: 60vh; }
+  .main h1 {
+    font-family: "DIN Alternate";
+    font-size: 35px;
+    color: #004488; }
+  .main h2 {
+    font-family: "DIN Alternate";
+    font-size: 25px;
+    color: #004488; }
+  .main .pages {
+    display: inline-block; }
+    .main .pages a {
+      border-radius: 5px;
+      color: #697784;
+      font-family: "DIN Alternate";
+      float: left;
+      padding: 8px 16px;
+      margin-right: 2px;
+      margin-bottom: 8px;
+      text-decoration: none; }
+      .main .pages a:hover:not(.current) {
+        background-color: #ddd; }
+    .main .pages .current {
+      background-color: #c9e3fc;
+      color: white; }
+
+[class*="col-"] {
+  position: inherit; }
+
+.cateogry-header hr {
+  border-top: 1px solid #c9e3fc;
+  margin: 5px 5% 38px auto; }
+
+article {
+  display: flex;
+  margin-bottom: 20px; }
+  article .article-info {
+    margin-right: 5%; }
+  article a {
+    text-decoration: none;
+    color: #004488;
+    font-family: "DIN Alternate";
+    font-size: 30px; }
+  article p {
+    font-family: "DIN Condensed";
+    font-size: 18px;
+    color: #00448857;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  article i {
+    color: #00448857; }
+  article span {
+    font-family: "DIN Condensed";
+    font-size: 15px;
+    color: #00448857;
+    margin-right: 5px; }
+  article time {
+    font-family: "DIN Condensed";
+    font-size: 15px;
+    color: #00448857;
+    margin-right: 5px; }
+  article .thumbnail {
+    margin-left: auto;
+    margin-right: 5%; }
+    article .thumbnail img {
+      height: 8vw;
+      width: 12vw;
+      min-height: 80px;
+      min-width: 120px; }
+
+aside hr {
+  border-top: 1px solid #c9e3fc;
+  margin: 10px 5% 20px auto; }
+
+aside a {
+  font-size: 18px; }
+
+aside .thumbnail img {
+  height: 6vw;
+  width: 9vw;
+  min-height: 60px;
+  min-width: 90px; }
+
+aside .latest-videos {
+  padding-top: 30px; }
+
+.footer {
+  font-family: "DIN Alternate";
+  background-color: #c9e3fc;
+  font-size: 15px;
+  line-height: 24px;
+  padding-top: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #697784; }
+  .footer hr {
+    border-top: 1px solid #697784;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .footer h3 {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    letter-spacing: 2px; }
+  .footer a {
+    color: #737373;
+    text-decoration: none; }
+    .footer a:hover {
+      color: white;
+      text-decoration: none; }
+  .footer ul {
+    list-style-type: none; }
+  .footer .social-links {
+    text-align: right;
+    margin-bottom: 10px; }
+    .footer .social-links a {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      margin-left: 6px;
+      margin-right: 0;
+      border-radius: 100%;
+      background-color: white; }
+
+.social-links {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none; }
+  .social-links a.twitter {
+    color: #3cf; }
+    .social-links a.twitter:hover {
+      background-color: #3cf;
+      color: white; }
+  .social-links a.youtube {
+    color: #FF0000; }
+    .social-links a.youtube:hover {
+      background-color: #FF0000;
+      color: white; }
+  .social-links a.linkedin {
+    color: #0e76a8; }
+    .social-links a.linkedin:hover {
+      background-color: #0e76a8;
+      color: white; }
+  .social-links a.github {
+    color: #666666; }
+    .social-links a.github:hover {
+      background-color: #666666;
+      color: white; }
+  .social-links li {
+    display: inline-block;
+    margin-bottom: 4px; }
+  .social-links li.title {
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: #96a2b2;
+    font-weight: 700;
+    font-size: 13px; }
+  .social-links a {
+    background-color: #eceeef;
+    color: #818a91;
+    font-size: 23px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear; }
+
+.copyright {
+  margin: 0;
+  margin-bottom: 10px; }
+
+.social-links.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 14px; }
+
+@media (max-width: 991px) {
+  .footer [class^=col-] {
+    margin-bottom: 30px; } }
+
+@media (max-width: 767px) {
+  .footer {
+    padding-bottom: 0; }
+    .footer .copyright {
+      text-align: center; }
+    .footer .social-links {
+      text-align: center; }
+  .social-links li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600; } }

@@ -1,0 +1,21 @@
+aside {
+	hr {
+		border-top: 1px solid #c9e3fc;
+		margin: 10px 5% 20px auto;
+	}
+	a {
+		font-size: 18px;
+	}
+	.thumbnail {
+		img {
+			height: 6vw;
+			width: 9vw;
+			min-height: 60px;
+			min-width: 90px;
+		}
+	}
+
+    .latest-videos {
+    	padding-top: 30px;
+    }
+}

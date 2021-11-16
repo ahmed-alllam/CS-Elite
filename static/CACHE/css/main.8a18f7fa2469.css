@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "DIN Condensed";
+  src: url("/static/fonts/DINCondensed-Light.ttf?0b5c0e7f552c"); }
+
+@font-face {
+  font-family: "DIN Alternate";
+  src: url("/static/fonts/DINAlternate-Bold.ttf?955ab2417692"); }
+
+/* line 9, static/styles/main.scss */
+* {
+  padding: 0;
+  margin: 0; }
+
+/* line 13, static/styles/main.scss */
+body {
+  background-color: #c9e3fc; }

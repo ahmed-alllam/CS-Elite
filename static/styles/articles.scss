@@ -1,0 +1,97 @@
+
+.main {
+	background-color: white;
+	border-top: 40px solid white;
+	border-bottom: 20px solid white;
+	padding-left: 5%;
+	width: inherit;
+	min-height: 60vh;
+	h1 {
+		font-family: "DIN Alternate";
+		font-size: 35px;
+		color: #004488;
+	}
+	h2 {
+		font-family: "DIN Alternate";
+		font-size: 25px;
+		color: #004488;
+	}
+	.pages {
+		display: inline-block;
+		a {
+			border-radius: 5px;
+			color: #697784;
+			font-family: "DIN Alternate";
+			float: left;
+			padding: 8px 16px;
+			margin-right: 2px;
+			margin-bottom: 8px;
+			text-decoration: none;
+			&:hover {
+				&:not(.current) {
+					background-color: #ddd;
+				}
+			}
+		}
+		.current {
+			background-color: #c9e3fc;
+			color: white;
+		}
+	}
+}
+[class*="col-"] {
+	position: inherit;
+}
+.cateogry-header {
+	hr {
+		border-top: 1px solid #c9e3fc;
+		margin: 5px 5% 38px auto;
+	}
+}
+article {
+	display: flex;
+	margin-bottom: 20px;
+	.article-info {
+		margin-right: 5%;
+	}
+	a {
+		text-decoration: none;
+		color: #004488;
+		font-family: "DIN Alternate";
+		font-size: 30px;
+	}
+	p {
+		font-family: "DIN Condensed";
+		font-size: 18px;
+		color: #00448857;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	i {
+		color: #00448857;
+	}
+	span {
+		font-family: "DIN Condensed";
+		font-size: 15px;
+		color: #00448857;
+		margin-right: 5px;
+	}
+
+    time {
+	    font-family: "DIN Condensed";
+	    font-size: 15px;
+	    color: #00448857;
+	    margin-right: 5px;
+    
+    }
+	.thumbnail {
+		margin-left: auto;
+		margin-right: 5%;
+		img {
+			height: 8vw;
+			width: 12vw;
+			min-height: 80px;
+			min-width: 120px;
+		}
+	}
+}

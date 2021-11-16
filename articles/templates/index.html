@@ -1,8 +1,25 @@
+{% load compress %}
+{% load static %}
+
 <!DOCTYPE html>
 
 <html lang="en">
 
+
+
+<head>
+
 {% include "sections/head.html" %}
+
+{% compress css %}
+    <link type="text/x-scss" href="{% static 'styles/header.scss' %}" rel="stylesheet" media="screen">
+    <link type="text/x-scss" href="{% static 'styles/main.scss' %}" rel="stylesheet" media="screen">
+    <link type="text/x-scss" href="{% static 'styles/articles.scss' %}" rel="stylesheet" media="screen">
+    <link type="text/x-scss" href="{% static 'styles/aside.scss' %}" rel="stylesheet" media="screen">
+    <link type="text/x-scss" href="{% static 'styles/footer.scss' %}" rel="stylesheet" media="screen">
+{% endcompress %}
+
+</head>
 
 <body>
 
