@@ -1,5 +1,6 @@
 from django.views.generic.list import ListView
 from articles import models
+from videos.models import YoutubeVideo
 class HomeView(ListView):
     template_name = 'index.html'
     model = models.Article
@@ -10,7 +11,9 @@ class HomeView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['categories'] = models.Category.objects.filter()
-        context['top_categories'] = models.Category.objects.filter()[0:5]
+        context['top_categories'] = models.Category.objects.filter()[:5]
+        context['top_articles'] = models.Article.objects.filter()[:5]
+        context['videos'] = YoutubeVideo.objects.filter()[:5]
         context.update(self.get_paginator_context(context.get('page_obj')))
 
         return context
@@ -25,7 +28,7 @@ class HomeView(ListView):
         }
 
 class ArticlesByCategory(ListView):
-    template_name = 'articles_list.html'
+    template_name = 'articles.html'
     model = models.Article
     paginate_by = 20
     context_object_name = 'articles'

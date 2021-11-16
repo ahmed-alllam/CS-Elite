@@ -4,25 +4,25 @@
 
 <html lang="en">
 
-{% include "head.html" %}
+{% include "sections/head.html" %}
 
 <body>
 
-    {% include "header.html" %}
+    {% include "sections/header.html" %}
 
     <main class="main row">
         <section class="latest-articles col-12 col-sm-8 col-md-8">
 
-            {% include "articles_list_section.html" %}
+            {% include "sections/articles_list.html" %}
 
-            {% include "paging_footer.html" %}
+            {% include "sections/paging_footer.html" %}
         </section>
 
-        {% include "aside.html" %}
+        {% include "sections/aside.html" %}
 
     </main>
 
-    {% include "footer.html" %}
+    {% include "sections/footer.html" %}
 </body>
 
 </html>
