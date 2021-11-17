@@ -1,0 +1,17 @@
+/* line 1, static/styles/article_detail.scss */
+article {
+  background-color: white;
+  border-top: 40px solid white;
+  border-bottom: 20px solid white;
+  min-height: 60vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 10px 740px 10px 1fr 1fr; }
+
+/* line 12, static/styles/article_detail.scss */
+article > \* {
+  grid-column: 4; }
+
+/* line 16, static/styles/article_detail.scss */
+article > figure {
+  grid-column: 1 / -1;
+  margin: 20px 0; }

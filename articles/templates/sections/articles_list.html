@@ -6,7 +6,7 @@
         <div class="article-info">
             <header>
                 <h2>
-                    <a href="/articles/{{ article.slug }}">
+                    <a href="/articles/{{ article.slug }}/">
                         {{ article.title }}
                     </a>
                 </h2>
@@ -32,7 +32,7 @@
             </div>
         </div>
 
-        <a href="/articles/{{ article.slug }}" class="thumbnail">
+        <a href="/articles/{{ article.slug }}/" class="thumbnail">
             <img src="{% get_media_prefix %}{{ article.thumbnail }}" alt="{{ article.title }}" />
         </a>
 

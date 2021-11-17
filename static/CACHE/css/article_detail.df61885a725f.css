@@ -1,0 +1,73 @@
+/* line 1, static/styles/article_detail.scss */
+.outer {
+  background-color: white; }
+
+/* line 5, static/styles/article_detail.scss */
+article {
+  background-color: white;
+  border-top: 32px solid white;
+  border-bottom: 20px solid white;
+  min-height: 60vh;
+  font-family: "DIN Alternate";
+  margin: 0 auto;
+  max-width: 1040px;
+  width: 100%; }
+
+/* line 17, static/styles/article_detail.scss */
+article h1 {
+  margin-top: 26px;
+  font-size: 48px;
+  color: #004488; }
+
+/* line 23, static/styles/article_detail.scss */
+article .description {
+  margin-top: 32px;
+  color: #2d5883b3;
+  font-size: 18px; }
+
+/* line 33, static/styles/article_detail.scss */
+article .extra-info {
+  margin-top: 24px;
+  display: flex;
+  color: #2d5883b3; }
+
+/* line 40, static/styles/article_detail.scss */
+article .extra-info img {
+  border-radius: 50%;
+  object-fit: cover; }
+
+/* line 46, static/styles/article_detail.scss */
+article .extras {
+  margin-left: 8px; }
+
+/* line 50, static/styles/article_detail.scss */
+article .extras .author-name {
+  flex: 1 1 0%; }
+
+/* line 54, static/styles/article_detail.scss */
+article .extras .article-extras {
+  margin-top: 8px; }
+
+/* line 58, static/styles/article_detail.scss */
+article .extras .article-extras span, time {
+  margin-right: 8px; }
+
+/* line 64, static/styles/article_detail.scss */
+article .thumbnail {
+  margin-top: 64px; }
+
+/* line 68, static/styles/article_detail.scss */
+article .thumbnail img {
+  height: auto;
+  width: 100%; }
+
+/* line 75, static/styles/article_detail.scss */
+article .article-text {
+  padding: 5vw 9vw 0; }
+
+/* line 81, static/styles/article_detail.scss */
+article blockquote {
+  grid-column: 3 / 5;
+  padding-left: 10px;
+  color: #666;
+  border-left: 3px solid black; }

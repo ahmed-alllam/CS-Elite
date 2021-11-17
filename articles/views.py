@@ -1,22 +1,19 @@
-from django.views.generic.base import TemplateView
+from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView
+from articles import models
 from articles.forms import AddCommentForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-class DetailedArticleView(TemplateView):
+class DetailedArticleView(DetailView):
     template_name = 'article_detail.html'
+    model = models.Article
+    context_object_name = 'article'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['categories'] = models.Category.objects.filter()
+        context['top_categories'] = models.Category.objects.filter()[:5]        
         return context
-
-class ArticlesByTagView(TemplateView):
-    template_name = 'articles.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return context
-
 
 class CommentCreateView(LoginRequiredMixin, CreateView):
     http_method_names = ['post']

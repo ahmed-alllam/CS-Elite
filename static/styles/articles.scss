@@ -39,9 +39,7 @@
 		}
 	}
 }
-[class*="col-"] {
-	position: inherit;
-}
+
 .cateogry-header {
 	hr {
 		border-top: 1px solid #c9e3fc;
@@ -92,6 +90,7 @@ article {
 			width: 12vw;
 			min-height: 80px;
 			min-width: 120px;
+			object-fit: cover;
 		}
 	}
 }

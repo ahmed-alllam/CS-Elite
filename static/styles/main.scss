@@ -13,3 +13,7 @@
 body {
 	background-color: #c9e3fc;
 }
+
+[class*="col-"] {
+	position: inherit;
+}

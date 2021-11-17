@@ -1,0 +1,52 @@
+/* line 2, static/styles/header.scss */
+.header {
+  text-align: center;
+  background: #c9e3fc;
+  color: #5ea6ee;
+  font-family: "DIN Alternate";
+  font-size: 23px;
+  box-shadow: 5px 5px 10px #00000010;
+  width: 100%;
+  position: sticky;
+  top: 0; }
+  /* line 13, static/styles/header.scss */
+  .header .title {
+    text-decoration: none;
+    color: inherit; }
+
+/* line 19, static/styles/header.scss */
+.navigation-bar {
+  font-family: "DIN Alternate";
+  font-size: 16px;
+  border-top: 2px solid;
+  border-color: #00000027;
+  background-color: white; }
+
+/* line 27, static/styles/header.scss */
+nav ul {
+  list-style-type: none;
+  overflow-x: scroll;
+  display: flex;
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
+
+/* line 34, static/styles/header.scss */
+nav li {
+  float: left; }
+
+/* line 37, static/styles/header.scss */
+nav a {
+  display: block;
+  color: black;
+  opacity: 47%;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  width: max-content; }
+  /* line 45, static/styles/header.scss */
+  nav a:hover {
+    background-color: #e0e0e0; }
+
+/* line 51, static/styles/header.scss */
+ul::-webkit-scrollbar {
+  display: none; }

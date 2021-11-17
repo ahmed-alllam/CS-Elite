@@ -42,5 +42,5 @@ class ArticlesByCategory(ListView):
         context = super().get_context_data(**kwargs)
         context['categories'] = models.Category.objects.filter()
         context['top_categories'] = models.Category.objects.filter()[:5]
-        context['category'] = models.Category.objects.get(slug=self.kwargs.get('slug'))
+        context['category_title'] = models.Category.objects.get(slug=self.kwargs.get('slug')).title
         return context

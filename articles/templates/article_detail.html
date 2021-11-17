@@ -1,13 +1,80 @@
+{% load compress %}
+{% load static %}
+
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
-    <head>
+<head>
 
-    </head>
+    {% include "sections/head.html" %}
 
-    <body>
+    {% compress css %}
+    <link type="text/x-scss" href="{% static 'styles/header.scss' %}" rel="stylesheet" media="screen">
+    <link type="text/x-scss" href="{% static 'styles/main.scss' %}" rel="stylesheet" media="screen">
+    <link type="text/x-scss" href="{% static 'styles/article_detail.scss' %}" rel="stylesheet" media="screen">
+    <link type="text/x-scss" href="{% static 'styles/footer.scss' %}" rel="stylesheet" media="screen">
+    {% endcompress %}
 
-    </body>
+</head>
+
+<body>
+
+    {% include "sections/header.html" %}
+
+
+    <div class="outer">
+        <article>
+
+            <h1>
+                {{ article.title }}
+            </h1>
+
+
+            <p class="description">
+                {{ article.description }}
+            </p>
+
+
+
+
+
+
+            <div class="extra-info">
+                <img src="{% get_media_prefix %}{{ article.author.profile_photo }}/" height="48" width="48" />
+
+                <div class="extras">
+                    <span class="author-name">
+                        {{ article.author.user.first_name }} {{ article.author.user.last_name}}
+                    </span>
+                    <div class="article-extras">
+                        <i class="fa fa-clock-o"></i>
+
+                        <span>{{ article.time_to_read }} min. read </span>
+
+                        <time datetime="{{ article.updated_at }}">
+                            <!--{{ article.updated_at }} -->
+                            <!-- TODO-->
+                            one day ago
+                        </time>
+                    </div>
+                </div>
+            </div>
+
+            <figure class="thumbnail hidden-xs">
+                <img src="{% get_media_prefix %}{{ article.thumbnail }}/" alt="{{ article.title }}" />
+            </figure>
+
+            <div class="article-text">
+                {{article.text | safe}}
+            </div>
+        </article>
+
+    </div>
+
+
+    {% include "sections/footer.html" %}
+
+</body>
 
 </html>

@@ -1,0 +1,9 @@
+/* line 1, static/styles/article_detail.scss */
+.main {
+  background-color: white;
+  border-top: 40px solid white;
+  border-bottom: 20px solid white;
+  padding-left: 5%;
+  width: 60%;
+  align: center;
+  min-height: 60vh; }
