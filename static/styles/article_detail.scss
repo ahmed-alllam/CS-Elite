@@ -55,7 +55,7 @@ article .extras .article-extras {
     margin-top: 8px;
 }
 
-article .extras .article-extras span,time {
+article .extras .article-extras spantime {
     margin-right: 8px;
 }
 
@@ -75,13 +75,21 @@ article .thumbnail img {
 
 
 article .article-text {
-    padding: 5vw 9vw 0;
+    padding: 4vw 6vw 0;
+    color: #004488;
+    font-family: "DIN Alternate";
+    font-size: 1.3rem;
+    line-height: 1.6em;
+    min-height: 230px;
+    margin-top: 36px;
 }
 
+.article-text > * {
+    margin: 0 0 1.5em;
+    text-decoration: none;
+}
 
-
-article blockquote {
-    grid-column: 3 / 5;
+.article-text > blockquote {
     padding-left: 10px;
     color: #666;
     border-left: 3px solid black;
