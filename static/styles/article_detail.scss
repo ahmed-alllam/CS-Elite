@@ -68,6 +68,8 @@ article .thumbnail {
 article .thumbnail img {
     height: auto;
     width: 100%;
+    aspect-ratio: 1.78;
+    object-fit: cover;
 }
 
 
