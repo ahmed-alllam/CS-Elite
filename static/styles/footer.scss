@@ -1,13 +1,13 @@
 
 .footer {
 	font-family: "DIN Alternate";
-	background-color: #c9e3fc;
+	background-color: #004488;
 	font-size: 15px;
 	line-height: 24px;
 	padding-top: 20px;
 	padding-left: 5%;
 	padding-right: 5%;
-	color: #697784;
+	color: #fff;
 	hr {
 		border-top: 1px solid #697784;
 		margin-top: 10px;
@@ -22,10 +22,10 @@
 		letter-spacing: 2px;
 	}
 	a {
-		color: #737373;
+		color: #fff;
 		text-decoration: none;
 		&:hover {
-			color: white;
+			color: #9baaff;
 			text-decoration: none;
 		}
 	}
