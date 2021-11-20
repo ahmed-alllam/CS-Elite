@@ -55,10 +55,8 @@
 
                         <span>{{ article.time_to_read }} min. read </span>
 
-                        <time datetime="{{ article.updated_at }}">
-                            <!--{{ article.updated_at }} -->
-                            <!-- TODO-->
-                            one day ago
+                        <time datetime="{{ article.updated_at |date:"U" }}">
+                            {{ article.updated_at }}
                         </time>
                     </div>
                 </div>
@@ -77,6 +75,8 @@
 
 
     {% include "sections/footer.html" %}
+
+    <script src="{% static "js/timeSince.js" %}"/> </script>
 
 </body>
 

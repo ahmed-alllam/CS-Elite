@@ -66,9 +66,8 @@
                     </p> 
 
                     <div>
-                        <time datetime="{{ video.created_at }}">
-                            <!-- TODO -->
-                            one day ago
+                        <time datetime="{{ video.created_at |date:"U"}}">
+                           {{ video.created_at }}
                         </time>
 
                         <i class="fa fa-clock-o"></i>
