@@ -12,7 +12,7 @@ class HomeView(ListView):
         context = super().get_context_data(**kwargs)
         context['categories'] = models.Category.objects.filter()
         context['top_categories'] = models.Category.objects.filter()[:5]
-        context['top_articles'] = models.Article.objects.filter()[:5]
+        context['top_articles'] = models.Article.objects.order_by('-views_count')[:5]
         context['videos'] = YoutubeVideo.objects.filter()[:5]
         context.update(self.get_paginator_context(context.get('page_obj')))
 

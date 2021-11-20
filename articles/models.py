@@ -21,14 +21,13 @@ class Article(models.Model):
     description = models.TextField()
     text = RichTextUploadingField()
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
     category = models.ForeignKey(to='articles.Category', related_name='articles', on_delete=SET_NULL, null=True)
     # tags = ArrayField(base_field=models.CharField(max_length=255))
     time_to_read = models.IntegerField(default=10)
     views_count = models.IntegerField(default=0)
 
     class Meta:
-        ordering = ('-updated_at',)
+        ordering = ('-created_at',)
 
     def save(self, **kwargs):
         self.slug = utils.unique_slugify(self, value=self.title)
