@@ -14,30 +14,23 @@ services:
       python3 manage.py migrate &&
       python3 manage.py collectstatic &&
       gunicorn --bind 0.0.0.0:8000 CSElite.wsgi --reload"
-    environment:
-      - DB_HOST=postgresdb
-      - DB_NAME=cseliteDB
-      - DB_USER=postgresdb
-      - DB_PASS=${DBPASSWORD}
-      - HOST_NAME=${HOSTNAME}
-      - SECRET_KEY=${SECRET_KEY}
+    env_file: 
+    - ../.env.django
     depends_on:
       - postgresdb
   postgresdb:
     image: postgres:12.1-alpine
     ports:
       - "5432:5432"
-    environment:
-      - POSTGRES_DB=cseliteDB
-      - POSTGRES_USER=postgresdb
-      - POSTGRES_PASSWORD=${DBPASSWORD}
+    env_file: 
+    - ../.env.postgresdb
   nginx:
     build:
       ./nginx
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-    environment:
-      - HOST_NAME=${HOSTNAME}
+    env_file: 
+    - ../.env.nginx
     ports:
       - 80:80
     depends_on:
