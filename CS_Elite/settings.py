@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'compressor',
     'staticfiles',
-    'storages',
     'articles',
     'videos'
 ]
@@ -152,14 +151,15 @@ else:
     PUBLIC_MEDIA_LOCATION = 'media'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
     DEFAULT_FILE_STORAGE = 'articles.storage_backends.PublicMediaStorage'
+    COMPRESS_STORAGE = 'storage.CachedS3BotoStorage'
 
 COMPRESS_ROOT = STATIC_URL
 
 
 STATICFILES_FINDERS = [
     'compressor.finders.CompressorFinder',
-    "staticfiles.finders.FileSystemFinder",
-    "staticfiles.finders.AppDirectoriesFinder",
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
