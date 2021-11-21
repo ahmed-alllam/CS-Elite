@@ -5,6 +5,8 @@ services:
   django:
     build:
       context: .
+    stdin_open: true # docker run -i
+    tty: true
     ports:
       - "127.0.0.1:8000:8000"
     volumes:
@@ -13,7 +15,7 @@ services:
       sh -c "python3 manage.py makemigrations &&
       python3 manage.py migrate &&
       python3 manage.py collectstatic &&
-      gunicorn --bind 0.0.0.0:8000 CSElite.wsgi --reload"
+      gunicorn --bind 0.0.0.0:8000 CS_Elite.wsgi --reload"
     env_file: 
     - ../.env.django
     depends_on:
