@@ -1,0 +1,44 @@
+
+version: '3'
+
+services:
+  django:
+    build:
+      context: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - .:/CSElite
+    command: >
+      sh -c "python3 manage.py makemigrations &&
+      python3 manage.py migrate &&
+      python3 manage.py collectstatic &&
+      gunicorn --bind 0.0.0.0:8000 CSElite.wsgi --reload"
+    environment:
+      - DB_HOST=postgresdb
+      - DB_NAME=cseliteDB
+      - DB_USER=postgresdb
+      - DB_PASS=${DBPASSWORD}
+      - HOST_NAME=${HOSTNAME}
+      - SECRET_KEY=${SECRET_KEY}
+    depends_on:
+      - postgresdb
+  postgresdb:
+    image: postgres:12.1-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=cseliteDB
+      - POSTGRES_USER=postgresdb
+      - POSTGRES_PASSWORD=${DBPASSWORD}
+  nginx:
+    build:
+      ./nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    environment:
+      - HOST_NAME=${HOSTNAME}
+    ports:
+      - 80:80
+    depends_on:
+      - django
