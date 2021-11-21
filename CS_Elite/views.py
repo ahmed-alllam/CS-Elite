@@ -4,7 +4,7 @@ from videos.models import YoutubeVideo
 class HomeView(ListView):
     template_name = 'index.html'
     model = models.Article
-    paginate_by = 2
+    paginate_by = 20
     context_object_name = 'articles'
     pages_range = 5
 
@@ -33,7 +33,6 @@ class ArticlesByCategory(ListView):
     paginate_by = 20
     context_object_name = 'articles'
     pages_range = 5
-    allow_empty = False
 
     def get_queryset(self):
         return super().get_queryset().filter(category__slug=self.kwargs.get('slug'))
