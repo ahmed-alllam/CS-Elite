@@ -1,4 +1,6 @@
 from django.views.generic.list import ListView
+from django.shortcuts import get_object_or_404
+
 from articles import models
 from videos.models import YoutubeVideo
 class HomeView(ListView):
@@ -41,5 +43,5 @@ class ArticlesByCategory(ListView):
         context = super().get_context_data(**kwargs)
         context['categories'] = models.Category.objects.filter()
         context['top_categories'] = models.Category.objects.filter()[:5]
-        context['category_title'] = models.Category.objects.get(slug=self.kwargs.get('slug')).title
+        context['category_title'] = get_object_or_404(models.Category, slug=self.kwargs.get('slug')).title
         return context

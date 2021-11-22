@@ -133,7 +133,7 @@ if DEBUG:
     STATIC_URL = '/static/'
     MEDIA_URL = '/media/'
     MEDIA_ROOT = BASE_DIR / 'media'
-    STATIC_ROOT = BASE_DIR / 'articles/static'
+    STATIC_ROOT = BASE_DIR / 'static'
 else:
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')

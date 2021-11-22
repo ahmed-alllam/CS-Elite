@@ -54,6 +54,9 @@ class Category(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField()
 
+    class Meta:
+        ordering = ('id',)
+
     def save(self, **kwargs):
         self.slug = utils.unique_slugify(self, value=self.title)
 
