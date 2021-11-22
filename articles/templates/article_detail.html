@@ -44,7 +44,7 @@
 
 
             <div class="extra-info">
-                <img src="{% get_media_prefix %}{{ article.author.profile_photo }}/" height="48" width="48" />
+                <img src="{% get_media_prefix %}{{ article.author.profile_photo }}" height="48" width="48" />
 
                 <div class="extras">
                     <span class="author-name">
@@ -63,7 +63,7 @@
             </div>
 
             <figure class="thumbnail hidden-xs">
-                <img src="{% get_media_prefix %}{{ article.thumbnail }}/" alt="{{ article.title }}" />
+                <img src="{% get_media_prefix %}{{ article.thumbnail }}" alt="{{ article.title }}" />
             </figure>
 
             <div class="article-text">

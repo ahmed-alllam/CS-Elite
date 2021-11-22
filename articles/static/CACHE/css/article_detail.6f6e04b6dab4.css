@@ -1,0 +1,74 @@
+/* line 1, articles/static/styles/article_detail.scss */
+.outer {
+  background-color: white;
+  padding: 0 4vw; }
+
+/* line 5, articles/static/styles/article_detail.scss */
+article {
+  background-color: white;
+  border-top: 32px solid white;
+  border-bottom: 20px solid white;
+  min-height: 60vh;
+  font-family: "DIN Alternate";
+  margin: 0 auto;
+  max-width: 1040px;
+  width: 100%; }
+  /* line 14, articles/static/styles/article_detail.scss */
+  article h1 {
+    font-size: 48px;
+    color: #004488; }
+  /* line 18, articles/static/styles/article_detail.scss */
+  article .description {
+    margin-top: 32px;
+    color: #004488D7;
+    font-size: 18px; }
+  /* line 23, articles/static/styles/article_detail.scss */
+  article .extra-info {
+    margin-top: 24px;
+    display: flex;
+    color: #004488D7; }
+    /* line 27, articles/static/styles/article_detail.scss */
+    article .extra-info img {
+      border-radius: 50%;
+      object-fit: cover; }
+  /* line 32, articles/static/styles/article_detail.scss */
+  article .extras {
+    margin-left: 8px; }
+    /* line 34, articles/static/styles/article_detail.scss */
+    article .extras .author-name {
+      flex: 1 1 0%; }
+    /* line 37, articles/static/styles/article_detail.scss */
+    article .extras .article-extras {
+      margin-top: 8px; }
+      /* line 39, articles/static/styles/article_detail.scss */
+      article .extras .article-extras span, article .extras .article-extras time {
+        margin-right: 8px; }
+  /* line 44, articles/static/styles/article_detail.scss */
+  article .thumbnail {
+    margin-top: 64px; }
+    /* line 46, articles/static/styles/article_detail.scss */
+    article .thumbnail img {
+      height: auto;
+      width: 100%;
+      aspect-ratio: 1.78;
+      object-fit: cover; }
+  /* line 53, articles/static/styles/article_detail.scss */
+  article .article-text {
+    padding: 4vw 6vw 0;
+    color: #004488;
+    font-family: "DIN Alternate";
+    font-size: 1.3rem;
+    line-height: 1.6em;
+    min-height: 230px;
+    margin-top: 36px; }
+
+/* line 64, articles/static/styles/article_detail.scss */
+.article-text > * {
+  margin: 0 0 1.5em;
+  text-decoration: none; }
+
+/* line 68, articles/static/styles/article_detail.scss */
+.article-text > blockquote {
+  padding-left: 10px;
+  color: #666;
+  border-left: 3px solid black; }

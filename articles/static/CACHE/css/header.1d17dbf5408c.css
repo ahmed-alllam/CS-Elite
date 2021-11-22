@@ -1,0 +1,56 @@
+/* line 2, articles/static/styles/header.scss */
+.header {
+  text-align: center;
+  background: #004488;
+  color: #c9e3fc;
+  font-family: "DIN Alternate";
+  font-size: 23px;
+  box-shadow: 5px 5px 10px #00000010;
+  width: 100%;
+  position: sticky;
+  top: 0; }
+  /* line 14, articles/static/styles/header.scss */
+  .header .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit; }
+  /* line 22, articles/static/styles/header.scss */
+  .header .logo {
+    margin-right: 12px; }
+
+/* line 27, articles/static/styles/header.scss */
+.navigation-bar {
+  font-family: "DIN Alternate";
+  font-size: 16px;
+  background-color: white; }
+
+/* line 33, articles/static/styles/header.scss */
+nav ul {
+  list-style-type: none;
+  overflow-x: scroll;
+  display: flex;
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
+
+/* line 40, articles/static/styles/header.scss */
+nav li {
+  float: left; }
+
+/* line 43, articles/static/styles/header.scss */
+nav a {
+  display: block;
+  color: black;
+  opacity: 47%;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  width: max-content; }
+  /* line 51, articles/static/styles/header.scss */
+  nav a:hover {
+    background-color: #e0e0e0; }
+
+/* line 57, articles/static/styles/header.scss */
+ul::-webkit-scrollbar {
+  display: none; }

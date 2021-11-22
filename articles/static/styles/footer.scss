@@ -33,9 +33,16 @@
 		list-style-type: none;
 	}
 
-	.about {
-		width: 48%;
-		margin-right: 2%;
+	@media (min-width: 992px) {
+		.about {
+			padding-right: 5%;
+		}
+	}
+
+	@media (max-width: 992px) {
+		.about {
+			padding-bottom: 3%;
+		}
 	}
 
 	.social-links {

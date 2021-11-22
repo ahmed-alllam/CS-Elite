@@ -1,0 +1,146 @@
+/* line 2, articles/static/styles/footer.scss */
+.footer {
+  font-family: "DIN Alternate";
+  background-color: #004488;
+  font-size: 15px;
+  line-height: 24px;
+  padding-top: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #fff; }
+  /* line 11, articles/static/styles/footer.scss */
+  .footer hr {
+    border-top: 1px solid #697784;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  /* line 16, articles/static/styles/footer.scss */
+  .footer h3 {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    letter-spacing: 2px; }
+  /* line 24, articles/static/styles/footer.scss */
+  .footer a {
+    color: #fff;
+    text-decoration: none; }
+    /* line 27, articles/static/styles/footer.scss */
+    .footer a:hover {
+      color: #9baaff;
+      text-decoration: none; }
+  /* line 32, articles/static/styles/footer.scss */
+  .footer ul {
+    list-style-type: none; }
+  /* line 37, articles/static/styles/footer.scss */
+  .footer .about .col-sm-12 {
+    padding-bottom: 30%; }
+  /* line 40, articles/static/styles/footer.scss */
+  .footer .about .col-md-5 {
+    padding-right: 30%; }
+  /* line 44, articles/static/styles/footer.scss */
+  .footer .social-links {
+    text-align: right;
+    margin-bottom: 10px; }
+    /* line 47, articles/static/styles/footer.scss */
+    .footer .social-links a {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      margin-left: 6px;
+      margin-right: 0;
+      border-radius: 100%;
+      background-color: white; }
+
+/* line 58, articles/static/styles/footer.scss */
+.social-links {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none; }
+  /* line 59, articles/static/styles/footer.scss */
+  .social-links a.twitter {
+    color: #3cf; }
+    /* line 60, articles/static/styles/footer.scss */
+    .social-links a.twitter:hover {
+      background-color: #3cf;
+      color: white; }
+  /* line 66, articles/static/styles/footer.scss */
+  .social-links a.youtube {
+    color: #FF0000; }
+    /* line 67, articles/static/styles/footer.scss */
+    .social-links a.youtube:hover {
+      background-color: #FF0000;
+      color: white; }
+  /* line 73, articles/static/styles/footer.scss */
+  .social-links a.linkedin {
+    color: #0e76a8; }
+    /* line 74, articles/static/styles/footer.scss */
+    .social-links a.linkedin:hover {
+      background-color: #0e76a8;
+      color: white; }
+  /* line 80, articles/static/styles/footer.scss */
+  .social-links a.github {
+    color: #666666; }
+    /* line 81, articles/static/styles/footer.scss */
+    .social-links a.github:hover {
+      background-color: #666666;
+      color: white; }
+  /* line 90, articles/static/styles/footer.scss */
+  .social-links li {
+    display: inline-block;
+    margin-bottom: 4px; }
+  /* line 94, articles/static/styles/footer.scss */
+  .social-links li.title {
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: #96a2b2;
+    font-weight: 700;
+    font-size: 13px; }
+  /* line 101, articles/static/styles/footer.scss */
+  .social-links a {
+    background-color: #eceeef;
+    color: #818a91;
+    font-size: 23px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear; }
+
+/* line 117, articles/static/styles/footer.scss */
+.copyright {
+  margin: 0;
+  margin-bottom: 10px; }
+
+/* line 122, articles/static/styles/footer.scss */
+.social-links.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 14px; }
+
+@media (max-width: 991px) {
+  /* line 131, articles/static/styles/footer.scss */
+  .footer [class^=col-] {
+    margin-bottom: 30px; } }
+
+@media (max-width: 767px) {
+  /* line 137, articles/static/styles/footer.scss */
+  .footer {
+    padding-bottom: 0; }
+    /* line 139, articles/static/styles/footer.scss */
+    .footer .copyright {
+      text-align: center; }
+    /* line 142, articles/static/styles/footer.scss */
+    .footer .social-links {
+      text-align: center; }
+  /* line 147, articles/static/styles/footer.scss */
+  .social-links li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600; } }

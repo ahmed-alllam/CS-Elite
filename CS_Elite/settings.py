@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY", "qhef@zg^@+3xlg@731ezx%&ob*l6bg9%r4-4@$2$z6*^ca!z@9")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', False)
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 ALLOWED_HOSTS = [os.environ.get('HOST_NAME', '*')]
 
 
@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'compressor',
-    'staticfiles',
     'articles',
     'videos'
 ]
@@ -133,8 +132,8 @@ USE_TZ = True
 if DEBUG:
     STATIC_URL = '/static/'
     MEDIA_URL = '/media/'
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-    STATIC_ROOT = BASE_DIR / 'static'
+    MEDIA_ROOT = BASE_DIR / 'media'
+    STATIC_ROOT = BASE_DIR / 'articles/static'
 else:
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
@@ -144,16 +143,17 @@ else:
 
     # s3 static settings
     STATIC_LOCATION = 'static'
+    STATIC_ROOT = BASE_DIR / 'articles/static'
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
     STATICFILES_STORAGE = 'articles.storage_backends.StaticStorage'
+
+    COMPRESS_URL = STATIC_URL
+    COMPRESS_STORAGE = 'articles.storage_backends.CachedS3Boto3Storage'
 
     # s3 public media settings
     PUBLIC_MEDIA_LOCATION = 'media'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
     DEFAULT_FILE_STORAGE = 'articles.storage_backends.PublicMediaStorage'
-    COMPRESS_STORAGE = 'storage.CachedS3BotoStorage'
-
-COMPRESS_ROOT = STATIC_URL
 
 
 STATICFILES_FINDERS = [
