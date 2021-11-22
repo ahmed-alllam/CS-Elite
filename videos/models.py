@@ -5,7 +5,7 @@ class YoutubeVideo(models.Model):
     thumbnail = models.ImageField()
     description = models.TextField()
     url = models.URLField()
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField()
     duration = models.CharField(max_length=10)
 
     class Meta:
