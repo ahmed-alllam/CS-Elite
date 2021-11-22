@@ -143,7 +143,7 @@ else:
 
     # s3 static settings
     STATIC_LOCATION = 'static'
-    STATIC_ROOT = BASE_DIR / 'articles/static'
+    STATIC_ROOT = BASE_DIR / 'static'
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
     STATICFILES_STORAGE = 'articles.storage_backends.StaticStorage'
 
