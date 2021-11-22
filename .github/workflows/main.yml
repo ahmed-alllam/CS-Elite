@@ -28,8 +28,8 @@ jobs:
           key: ${{ secrets.KEY }}
           script: |
             sudo su
-            rm -rf CS_Elite
+            rm -rf CS-Elite
             git clone https://github.com/ahmedemad3965/CS-Elite
-            cd CS_Elite
+            cd CS-Elite
             sudo docker-compose down
             sudo docker-compose up --build -d
