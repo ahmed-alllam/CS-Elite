@@ -27,9 +27,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           script: |
-            sudo su
             rm -rf CS-Elite
             git clone https://github.com/ahmedemad3965/CS-Elite
             cd CS-Elite
-            sudo docker-compose down
-            sudo docker-compose up --build -d
+            docker-compose down
+            docker-compose up --build -d
