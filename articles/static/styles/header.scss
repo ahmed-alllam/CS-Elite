@@ -30,12 +30,57 @@
 	background-color: white;
 }
 nav {
+
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	
+
+	.scroll-buttons {
+		background-color: transparent;
+    	background-repeat: no-repeat;
+    	border: none;
+    	cursor: pointer;
+    	overflow: hidden;
+    	outline: none;
+
+		width: 17px;
+		height: 17px;
+	}
+
+	#previous {
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		position: absolute;
+		margin-left: 8px;
+	}
+	
+	#next {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		margin-right: 8px;
+	}
+
+	.scroll-icons {
+		content: "";
+		background-color: transparent;
+		opacity: 47%;
+		font-size: 12px;
+		color: black;
+	}
+
 	ul {
 		list-style-type: none;
 		overflow-x: scroll;
 		display: flex;
 		-ms-overflow-style: none;
 		scrollbar-width: none;
+
+		width: calc(100% - 50px);
+		margin: auto;
 	}
 	li {
 		float: left;

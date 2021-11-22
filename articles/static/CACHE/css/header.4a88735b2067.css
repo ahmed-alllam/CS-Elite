@@ -1,0 +1,92 @@
+/* line 2, articles/static/styles/header.scss */
+.header {
+  text-align: center;
+  background: #004488;
+  color: #c9e3fc;
+  font-family: "DIN Alternate";
+  font-size: 23px;
+  box-shadow: 5px 5px 10px #00000010;
+  width: 100%;
+  position: sticky;
+  top: 0; }
+  /* line 14, articles/static/styles/header.scss */
+  .header .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit; }
+  /* line 22, articles/static/styles/header.scss */
+  .header .logo {
+    margin-right: 12px; }
+
+/* line 27, articles/static/styles/header.scss */
+.navigation-bar {
+  font-family: "DIN Alternate";
+  font-size: 16px;
+  background-color: white; }
+
+/* line 32, articles/static/styles/header.scss */
+nav {
+  display: flex;
+  flex-direction: row;
+  position: relative; }
+  /* line 39, articles/static/styles/header.scss */
+  nav .scroll-buttons {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    width: 25px;
+    height: 25px; }
+  /* line 51, articles/static/styles/header.scss */
+  nav #previous {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    margin-left: 12px; }
+  /* line 59, articles/static/styles/header.scss */
+  nav #next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 12px; }
+  /* line 67, articles/static/styles/header.scss */
+  nav .scroll-icons {
+    content: "";
+    background-color: transparent;
+    opacity: 47%;
+    font-size: 12px;
+    color: black; }
+  /* line 75, articles/static/styles/header.scss */
+  nav ul {
+    list-style-type: none;
+    overflow-x: scroll;
+    display: flex;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: calc(100% - 75px);
+    margin: auto; }
+  /* line 85, articles/static/styles/header.scss */
+  nav li {
+    float: left; }
+  /* line 88, articles/static/styles/header.scss */
+  nav a {
+    display: block;
+    color: black;
+    opacity: 47%;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: max-content; }
+    /* line 96, articles/static/styles/header.scss */
+    nav a:hover {
+      background-color: #e0e0e0; }
+
+/* line 102, articles/static/styles/header.scss */
+ul::-webkit-scrollbar {
+  display: none; }

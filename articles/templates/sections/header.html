@@ -7,10 +7,18 @@
     </a>
 
     <nav class="navigation-bar">
-        <ul>
+        <button class="scroll-buttons" id="previous">
+            <i class="fa fa-arrow-left scroll-icons" aria-hidden="true"></i>
+        </button>
+
+        <ul id="categories-list">
             {% for category in categories %}
             <li><a href="/categories/{{ category.slug }}"> {{ category.title }} </a></li>
             {% endfor %}
         </ul>
+
+        <button class="scroll-buttons" id="next">
+            <i class="fa fa-arrow-right scroll-icons" aria-hidden="true"></i>
+        </button>
     </nav>
 </header>
