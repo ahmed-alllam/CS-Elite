@@ -70,4 +70,8 @@ article {
 		color: #666;
 		border-left: 3px solid black;
 	}
+
+	pre code.hljs {
+        overflow: auto;
+    }
 }
