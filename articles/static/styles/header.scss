@@ -37,31 +37,30 @@ nav {
 	
 
 	.scroll-buttons {
-		background-color: transparent;
-    	background-repeat: no-repeat;
-    	border: none;
+		color: white;
+		background-color: white;
+		width: 32px;
+		height: 100%;
+		top: 50%;
+		transform: translateY(-50%);
+		position: absolute;
+
+		z-index: 1;
+
+		border: none;
     	cursor: pointer;
     	overflow: hidden;
     	outline: none;
 
-		width: 17px;
-		height: 17px;
 	}
 
 	#previous {
 		left: 0;
-		top: 50%;
-		transform: translateY(-50%);
-		position: absolute;
-		margin-left: 8px;
+		visibility: hidden;
 	}
 	
 	#next {
-		position: absolute;
-		right: 0;
-		top: 50%;
-		transform: translateY(-50%);
-		margin-right: 8px;
+		right: 0;		
 	}
 
 	.scroll-icons {
@@ -78,9 +77,6 @@ nav {
 		display: flex;
 		-ms-overflow-style: none;
 		scrollbar-width: none;
-
-		width: calc(100% - 50px);
-		margin: auto;
 	}
 	li {
 		float: left;
