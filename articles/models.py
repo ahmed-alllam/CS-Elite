@@ -15,9 +15,9 @@ class User(models.Model):
 
 class Article(models.Model):
     author = models.ForeignKey(to=User, related_name='articles', on_delete=CASCADE)
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=1000)
     thumbnail = models.ImageField()
-    slug = models.SlugField()
+    slug = models.SlugField(max_length=1000)
     description = models.TextField()
     text = RichTextUploadingField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -40,7 +40,7 @@ class Article(models.Model):
 class Comment(models.Model):
     article = models.ForeignKey(to=Article, related_name='comments', on_delete=CASCADE)
     user = models.ForeignKey(to=User, related_name='comments', on_delete=CASCADE)
-    slug = models.SlugField()
+    slug = models.SlugField(max_length=1000)
     text = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 

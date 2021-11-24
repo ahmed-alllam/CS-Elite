@@ -54,7 +54,10 @@ article {
 		}
 	}
 	.article-text {
-		padding: 4vw 6vw 0;
+		padding: 4vw 1vw 0;
+		max-width: 900px;
+		margin-left: auto;
+		margin-right: auto;
 		color: #004488;
 		font-family: "DIN Alternate";
 		font-size: 1.3rem;
@@ -67,11 +70,6 @@ article {
 	>* {
 		margin: 0 0 1.5em;
 		text-decoration: none;
-	}
-	>blockquote {
-		padding-left: 10px;
-		color: #666;
-		border-left: 3px solid black;
 	}
 
 	pre code.hljs {
