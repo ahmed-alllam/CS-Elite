@@ -58,13 +58,54 @@ article {
 		font-family: "DIN Alternate";
 		font-size: 30px;
 	}
+
+
+	@media all and (max-device-width: 720px){
+		a {
+			font-size: 26px;
+		}
+	}
+	
+	@media all and (max-device-width: 640px){
+		a {
+			font-size: 23px;
+		}
+	}
+	
+	@media all and (max-device-width: 320px){
+		a {
+			font-size: 20px;
+		}
+	}
+
+
 	p {
 		font-family: "DIN Condensed";
-		font-size: 18px;
+		font-size: 19px;
 		color: #004488A7;
 		margin-top: 10px;
 		margin-bottom: 10px;
 	}
+
+
+
+
+
+	@media all and (max-device-width: 640px){
+		p {
+			font-size: 17px;
+		}
+	}
+	
+	@media all and (max-device-width: 320px){
+		p {
+			font-size: 15px;
+		}
+	}
+
+
+
+
 	i {
 		color: #004488A7;
 	}
