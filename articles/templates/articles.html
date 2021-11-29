@@ -19,6 +19,12 @@
     <title data-rh="true">CS Elite | {{ category_title }}</title>
     <meta name="title" content="CS Elite | {{ category_title }}">
     <meta name="description" content="Read Latest Articles about {{ category_title }}">
+
+
+    <meta property="og:title" content="CS Elite | {{ category_title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{% static 'Banner.png' %}" />
+
 </head>
 <body>
     {% include "sections/header.html" %}
